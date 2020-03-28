@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start:build": "es-dev-server --root-dir dist --app-index index.html --open --compatibility none",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "start": "es-dev-server --app-index index.html --node-resolve --preserve-symlinks"
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^0.21.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.15.4",
+    "es-dev-server": "^1.5.0"
+  },
+  "name": "dpt-app",
+  "version": "0.0.0",
+  "description": "Webcomponent dpt-app following open-wc recommendations",
+  "author": "dpt-app",
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^1.0.0",
+    "lit-element": "^2.0.1"
+  }
+}
