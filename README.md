@@ -1,3 +1,8 @@
+## Duncan web application
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b2a3613-d433-40d9-a7c5-44ad63d29f08/deploy-status)](https://app.netlify.com/sites/dpt-app/deploys)
+
+view demo: [https://dpt-app.netlify.com/](https://dpt-app.netlify.com/)
+
 <p align="center">
   <img width="200" src="https://open-wc.org/hero.png"></img>
 </p>
