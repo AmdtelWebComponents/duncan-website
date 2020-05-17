@@ -7,13 +7,18 @@
   <meta name="Description" content="Put your description here.">
   <base href="/">
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&text=StrenghivyE" rel="stylesheet">
   <style>
     html,
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
+      font-size: calc(1vw + 1vh + 0.5vmin);
       background-color: #ededed;
+      overflow: hidden;
     }
   </style>
   <title>dpt-app</title>
@@ -23,6 +28,12 @@
   <dpt-app></dpt-app>
 
   <script type="module" src="./src/dpt-app.js"></script>
+  <script>
+    // @TODO: Remove this after user agent stylesheet bug is fixed
+    // This will enable css edit in dev tools...
+    // https://bugs.chromium.org/p/chromium/issues/detail?id=946975
+    delete Document.prototype.adoptedStyleSheets;
+  </script>
 </body>
 
 </html>
