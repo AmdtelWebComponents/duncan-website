@@ -143,6 +143,6 @@ export class DptApp extends LitElement {
     this._pageIDX = pageLib.findIndex(i=>i==this._page);
   }
   async loadLazy() {
-    await import('./elements/dpt-' + this._page + '-page.js');
+    await import('src/elements/dpt-' + this._page + '-page.js');
   }
 }
