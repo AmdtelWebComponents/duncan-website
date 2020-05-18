@@ -14,6 +14,13 @@ import 'elix/define/Carousel.js';
 
 import '@polymer/app-layout/demo/sample-content.js';
 
+import './dpt-home-page.js';
+import './dpt-services-page.js';
+import './dpt-events-page.js';
+import './dpt-store-page.js';
+import './dpt-articles-page.js';
+import './dpt-contact-page.js';
+
 const pageLib = ['home', 'services', 'events', 'store', 'articles', 'contact']
 
 function getPageElement(page) {
@@ -138,11 +145,11 @@ export class DptApp extends LitElement {
     }
     this._page = path === '/' ? 'home' : path.slice(1);
     if (customElements.get('dpt-' + this._page + '-page') === undefined) {
-      this.loadLazy();
+      // this.loadLazy();  due to rollup not playing with importing with runtime variable importing
     }
     this._pageIDX = pageLib.findIndex(i=>i==this._page);
   }
-  async loadLazy() {
-    await import('./dpt-' + this._page + '-page.js');
-  }
+  // async loadLazy() {
+  //   await import('./dpt-' + this._page + '-page.js');
+  // }
 }
